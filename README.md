@@ -1,6 +1,6 @@
 # val-exception-handler
 
-[tarekwiz / League-Unpacker (https://github.com/tarekwiz/League-Unpacker/blob/master/Unpackman/Main.cpp)] using RtlpCallVectoredHandlers instead of NtRaiseException
+Attempted conversion of [tarekwiz / League-Unpacker (https://github.com/tarekwiz/League-Unpacker/blob/master/Unpackman/Main.cpp)] using RtlpCallVectoredHandlers instead of NtRaiseException
 
 It's current state is rather underwhelming, as it is only able to properly dump the necessary UWORLD_STATE & UWORLD_KEY offsets
 
