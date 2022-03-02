@@ -12,28 +12,6 @@
 
 #pragma comment(lib, "ntdll.lib")
 
-typedef struct _RTL_PROCESS_MODULE_INFORMATION
-{
-	ULONG Section;
-	PVOID MappedBase;
-	PVOID ImageBase;
-	ULONG ImageSize;
-	ULONG Flags;
-	USHORT LoadOrderIndex;
-	USHORT InitOrderIndex;
-	USHORT LoadCount;
-	USHORT OffsetToFileName;
-	CHAR FullPathName[256];
-
-} RTL_PROCESS_MODULE_INFORMATION, * PRTL_PROCESS_MODULE_INFORMATION;
-
-typedef struct _RTL_PROCESS_MODULES
-{
-	ULONG NumberOfModules;
-	RTL_PROCESS_MODULE_INFORMATION Modules[1];
-
-} RTL_PROCESS_MODULES, * PRTL_PROCESS_MODULES;
-
 typedef NTSTATUS (_stdcall* call)(PEXCEPTION_RECORD ExceptionRecord, PCONTEXT ThreadContext, int baseIDX);
 call raise;
 
@@ -102,10 +80,6 @@ void write_file(const char* name, const void* data, size_t len)
 PVOID address = nullptr;
 EXCEPTION_RECORD exr;
 CONTEXT ctx;
-
-int dbg;
-
-HANDLE hThread;
 DWORD_PTR baseTextAddress = 0;
 unsigned char* v_buffer;
 
