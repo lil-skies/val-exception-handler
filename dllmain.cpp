@@ -81,8 +81,6 @@ PVOID address = nullptr;
 EXCEPTION_RECORD exr;
 CONTEXT ctx;
 DWORD_PTR baseTextAddress = 0;
-unsigned char* v_buffer;
-
 DWORD size_of = 0;
 DWORD64 i = 0;
 DWORD WINAPI decrypt()
