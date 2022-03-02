@@ -2,9 +2,8 @@
 
 Attempted fork of [tarekwiz / League-Unpacker] using RtlpCallVectoredHandlers instead of NtRaiseException
 
-It's current state is rather underwhelming, only able to properly dump the necessary UWORLD_STATE & UWORLD_KEY offsets
+It's current state is rather underwhelming, as it is only able to properly dump the necessary UWORLD_STATE & UWORLD_KEY offsets
 
-NOTE
 To update to current Windows version: 
 
 ```
