@@ -102,6 +102,8 @@ DWORD WINAPI decrypt()
 
 	}
 
+	uintptr_t gos = find_pattern(code_buffer, baseTextAddress, size_of_text, "\x4C\x8B\x8C\xD9\x00\x00\x00\x00\x49\xC1\xEA\x20\xB8\x00\x00\x00\x00\xF7\xE3\x8B\xC3", "xxxx????xxxxx????xxxx", 0x5);
+
 	uintptr_t uw = find_pattern(code_buffer, baseTextAddress, size_of_text, "\x4B\x8B\xBC\xD5\x00\x00\x00\x00\x41\x8B\xC2\x2B\xC2\x45\x8B\xCA", "xxxx????xxxxxxxx", 0x5);
 
 	uintptr_t gi = find_pattern(code_buffer, baseTextAddress, size_of_text, "\x49\x8B\x87\x00\x00\x00\x00\x48\x85\xC0\x74\x09\x48\x8B\xB0\x00\x00\x00\x00\xEB\x07", "xxx????xxxxxxxx????xx", 0x4);
@@ -122,8 +124,13 @@ DWORD WINAPI decrypt()
 
 	uintptr_t fcamera = find_pattern(code_buffer, baseTextAddress, size_of_text, "\xF2\x0F\x11\x87\x00\x00\x00\x00\x8B\x48\x14\x89\x8F\x00\x00\x00\x00\x8B\x40\x18\x89\x87\x00\x00\x00\x00", "xxxx????xxxxx????xxxxx????", 0x17);
 
+	uintptr_t los = find_pattern(code_buffer, baseTextAddress, size_of_text, "\x48\x8B\x00\x55\x56\x57\x41\x00\x41\x00\x48\x8D\x00\x00\x48\x81\xEC\x00\x00\x00\x00\x48\xC7\x44\x24\x60", "xx?xxxx?x?xx??xxx????xxxxx", 0x1);
+
+	uintptr_t tcomp = find_pattern(code_buffer, baseTextAddress, size_of_text, "\x48\x8B\x03\x45\x33\xC0\x48\x8B\x17\x48\x8B\xCB\x48\x8B\x80\x00\x00\x00\x00", "xxxxxxxxxxxxxxx????", 0x10);
+
 	PrintMessage("===============================\n");
 
+	if (gos)      PrintMessage("uintptr_t g_object_state = 0x%X\n", *(uintptr_t*)gos);
 	if (uw)       PrintMessage("uintptr_t uworld_state = 0x%X\n", *(uintptr_t*)uw); else PrintMessage("failed to find uworld_state\n");
 	if (uw)       PrintMessage("uintptr_t uworld_key = 0x%X\n", *(uintptr_t*)uw + 0x38); else PrintMessage("failed to find uworld_key\n");
 	if (gi)       PrintMessage("uintptr_t game_instance = 0x%X\n", *(uintptr_t*)gi); else PrintMessage("failed to find game_instance\n");
@@ -137,6 +144,8 @@ DWORD WINAPI decrypt()
 	if (pcamera)  PrintMessage("uintptr_t camera_position = 0x%X\n", *(short*)pcamera);
 	if (rcamera)  PrintMessage("uintptr_t camera_position = 0x%X\n", *(short*)rcamera);
 	if (fcamera)  PrintMessage("uintptr_t camera_position = 0x%X\n", *(short*)fcamera);
+	if (los)      PrintMessage("uintptr_t line_of_sight = 0x%X\n", los - baseTextAddress);
+	if (tcomp)    PrintMessage("uintptr_t team_component = 0x%X\n", *(short*)tcomp);
 
 	PrintMessage("===============================\n");
 
