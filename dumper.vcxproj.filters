@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ndk">
+      <UniqueIdentifier>{fb8f8930-8137-4177-8749-0da8481b3c75}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\asm.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\cctypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\cmfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\cmtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\dbgkfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\dbgktypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\exfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\extypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\halfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\haltypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ifssupp.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\inbvfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\inbvtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\inline_ntcurrentteb.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\iofuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\iotypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kbd.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kdfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kdtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kefuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ketypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ldrfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ldrtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\lpcfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\lpctypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\mmfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\mmtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\no_sal2.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntdll.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntndk.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntnls.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntstrsafe.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\obfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\obtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\peb_teb.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\pofuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\potypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\psfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\pstypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\rtlfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\rtltypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\sefuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\setypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\umfuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\umtypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\vffuncs.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\vftypes.h">
+      <Filter>ndk</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\physical_memory v4\Project1\ndk\dbgkfuncs_deprectated.txt">
+      <Filter>ndk</Filter>
+    </Text>
+    <Text Include="..\..\physical_memory v4\Project1\ndk\gpl.txt">
+      <Filter>ndk</Filter>
+    </Text>
+    <Text Include="..\..\physical_memory v4\Project1\ndk\lgpl.txt">
+      <Filter>ndk</Filter>
+    </Text>
+    <Text Include="..\..\physical_memory v4\Project1\ndk\ndk.txt">
+      <Filter>ndk</Filter>
+    </Text>
+    <Text Include="..\..\physical_memory v4\Project1\ndk\readme.txt">
+      <Filter>ndk</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\physical_memory v4\Project1\ndk\LICENSE">
+      <Filter>ndk</Filter>
+    </None>
+    <None Include="..\..\physical_memory v4\Project1\ndk\README.md">
+      <Filter>ndk</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{557fb16c-c25a-474b-bc17-ff6303c4667c}</ProjectGuid>
+    <RootNamespace>dumper</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\v_dumper\dumper;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>F:\v_dumper\dumper;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\v_dumper\dumper;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>F:\v_dumper\dumper;F:\v_dumper\dumper\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DUMPER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;DUMPER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;DUMPER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions); _CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;DUMPER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\asm.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\cctypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\cmfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\cmtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\dbgkfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\dbgktypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\exfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\extypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\halfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\haltypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ifssupp.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\inbvfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\inbvtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\inline_ntcurrentteb.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\iofuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\iotypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kbd.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kdfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kdtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\kefuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ketypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ldrfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ldrtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\lpcfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\lpctypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\mmfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\mmtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\no_sal2.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntdll.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntndk.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntnls.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\ntstrsafe.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\obfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\obtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\peb_teb.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\pofuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\potypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\psfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\pstypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\rtlfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\rtltypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\sefuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\setypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\umfuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\umtypes.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\vffuncs.h" />
+    <ClInclude Include="..\..\physical_memory v4\Project1\ndk\vftypes.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="func.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\physical_memory v4\Project1\ndk\dbgkfuncs_deprectated.txt" />
+    <Text Include="..\..\physical_memory v4\Project1\ndk\gpl.txt" />
+    <Text Include="..\..\physical_memory v4\Project1\ndk\lgpl.txt" />
+    <Text Include="..\..\physical_memory v4\Project1\ndk\ndk.txt" />
+    <Text Include="..\..\physical_memory v4\Project1\ndk\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\physical_memory v4\Project1\ndk\LICENSE" />
+    <None Include="..\..\physical_memory v4\Project1\ndk\README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
