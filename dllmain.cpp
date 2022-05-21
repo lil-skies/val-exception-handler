@@ -122,8 +122,6 @@ DWORD WINAPI decrypt()
 
 	uintptr_t fcamera = find_pattern(code_buffer, baseTextAddress, size_of_text, "\xF2\x0F\x11\x87\x00\x00\x00\x00\x8B\x48\x14\x89\x8F\x00\x00\x00\x00\x8B\x40\x18\x89\x87\x00\x00\x00\x00", "xxxx????xxxxx????xxxxx????", 0x17);
 
-	PrintMessage("drop: 0x%x\n", pcamera - baseTextAddress);
-
 	PrintMessage("===============================\n");
 
 	if (uw)       PrintMessage("uintptr_t uworld_state = 0x%X\n", *(uintptr_t*)uw); else PrintMessage("failed to find uworld_state\n");
