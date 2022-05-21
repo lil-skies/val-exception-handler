@@ -1,14 +1,14 @@
 # val-exception-handler
 
-Attempted conversion of [tarekwiz / League-Unpacker (https://github.com/tarekwiz/League-Unpacker/blob/master/Unpackman/Main.cpp)] using RtlpCallVectoredHandlers instead of NtRaiseException
+Attempted conversion of [tarekwiz / League-Unpacker (https://github.com/tarekwiz/League-Unpacker/blob/master/Unpackman/Main.cpp)] for Valorant
 
-It's current state is rather underwhelming, as it is only able to properly dump the necessary UWORLD_STATE & UWORLD_KEY offsets
+As many know, Valorant utilizes an exception handler to "unlock" the .text pages. By using a .dll to inject into the memory process, it allows reading of the memory despite the exception handler. The project also includes a work-in-progress exception that can be raised. As of know, I am unsure whether raising the exception matters. 
 
-To update to current Windows version, offsets must be made to the following: 
-```
-const auto ki_dispatcher = reinterpret_cast<std::uintptr_t>(GetProcAddress(GetModuleHandleA("ntdll.dll"), "KiUserExceptionDispatcher"));
-const auto exception_dispatch = calculate_relative<std::int32_t>(ki_dispatcher + 0x29, 5, 1); //ki_dispatcher + ??? [new offset]
-const auto rtlp = calculate_relative<std::int32_t>(exception_dispatch + 0x66, 5, 1); //exception_dispatch + ??? [new_offset]
-```
-NOTE: ntdll.dll function chains can change per Windows version, so look for:
-ExportedFunction -> RtlDispatchException -> RtlpCallVectoredHandlers
+[Instructions]
+1. Compile the .dll
+2. Disable Vanguard, run Valorant from explorer.exe, inject OR inject whilst in the Range 
+
+BEWARE: The signatures and masks are "as-is". They are not 100% perfect and may need to be updated. 
+As well, the .dll can sometimes hang or become very slow. Simply re-run Valorant and re-inject. 
+
+As of now, it can properly dump the main, necessary offsets for Valorant as of 5/15/2022
