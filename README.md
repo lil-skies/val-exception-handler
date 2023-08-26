@@ -2,7 +2,7 @@
 
 Attempted conversion of [tarekwiz / League-Unpacker (https://github.com/tarekwiz/League-Unpacker/blob/master/Unpackman/Main.cpp)] for Valorant
 
-As many know, Valorant utilizes an exception handler to "unlock" the .text pages. By using a .dll to inject into the memory process, it allows reading of the memory despite the exception handler. The project also includes a work-in-progress exception that can be raised. As of know, I am unsure whether raising the exception matters. 
+As many know, Valorant utilizes an exception handler to "unlock" the .text pages. By using a .dll to inject into the memory process, it allows reading of the memory despite the exception handler. The project also includes a work-in-progress exception that can be raised. As of now, I am unsure whether raising the exception matters. 
 
 Instructions
 1. Compile the .dll
